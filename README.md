@@ -1,5 +1,38 @@
 # Project Template: React/Rails API
 
+# My app Control flow
+
+1. Home page-describes about each page and links to them.
+2. myschools-shows cards of the schools available.has an option to add a new school
+3. cohorts- shows cohorts.cannot add a new cohort thet are already seeded.so that students can register into them.
+4. Students- Shows a list of students,you can add a new student,update details and expell student.
+
+hence models needed are:........
+
+<li> school model-attributes:imageurl="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190902124355/ruby-programming-language.png",
+
+
+<p > name,location,cohortsnum=cohort.length,include cohorts,
+
+
+<li> Cohort model-name,include students,imageurl
+<li> Student model- name,students_email,imageurl,mycohort-cohort applied
+<li> User model( to be executed as last)
+
+# R/ships
+
+<li> school model-has many cohorts through students
+ <li> Cohort model-many schools have many cohorts.
+ <li> Student model-belongs to both cohort and school.
+
+ # Authentication
+
+ <li> After youve viewed school three times you have to login so as to view anythong else.hence need for the bosses user model.
+
+ # Validations
+
+ <li> A student must have a cohort:presence:true
+
 ## Description
 
 This project is scaffolded so that you can build a React frontend and Rails
@@ -9,7 +42,7 @@ backend together, and easily deploy them to Render.
 SQLite, you will need to make the following changes in the project files:
 
 1. In the `Gemfile`, replace `gem 'pg', '~> 1.1'` with `gem 'sqlite3', '~>
-   1.4'`.
+1.4'`.
 2. In the `database.yml` file, change the line `adapter: postgresql` to
    `adapter: sqlite3`.
 
@@ -287,11 +320,11 @@ brew services start postgresql
 ### Set Up a Render Account
 
 You can sign up for a free account at
-[https://dashboard.render.com/register][Render signup]. We recommend that you
+[https://dashboard.render.com/register][render signup]. We recommend that you
 sign up using GitHub as that will make it a little easier for you to connect
 Render to your GitHub account. The instructions below assume you've done that.
 
-[Render signup]: https://dashboard.render.com/register
+[render signup]: https://dashboard.render.com/register
 
 Once you've completed the signup process, you will be taken to the Render
 dashboard. In order to connect Render to your GitHub account, you'll need to
