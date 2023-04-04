@@ -59,23 +59,31 @@ function Header() {
               }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                <li className="text-gray-600 hover:text-blue-600">
+              <li className="text-gray-600 hover:text-blue-600">
                   <NavLink
                     className="hover:border-b-4 pb-2 border-white"
-                    to="/school"
+                    to="/schooldata"
                   >
                     My Schools
                   </NavLink>
                 </li>
-
                 <li className="text-gray-600 hover:text-blue-600">
+                  <NavLink
+                    className="hover:border-b-4 pb-2 border-white"
+                    to="/tms"
+                  >
+                    Technical Mentors
+                  </NavLink>
+                </li>
+
+                {/* <li className="text-gray-600 hover:text-blue-600">
                   <NavLink
                     className="hover:border-b-4 pb-2 border-white"
                     to="/class"
                   >
                     Classes
                   </NavLink>
-                </li>
+                </li> */}
                 <li className="text-gray-600 hover:text-blue-600">
                   <NavLink
                     className="hover:border-b-4 pb-2 border-white"
@@ -100,6 +108,15 @@ function Header() {
                     contact us
                   </NavLink>
                 </li>
+                 <li className="text-gray-600 hover:text-blue-600">
+                  <NavLink
+                    className="hover:border-b-4 pb-2 border-white"
+                    to="/login"
+                  >
+                    LOGIN
+                  </NavLink>
+                </li>
+
               </ul>
             </div>
           </div>

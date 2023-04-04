@@ -17,10 +17,9 @@ function Home() {
             to too much for you to handle.{" "}
             <span className="text-accent">NO WORRIES!</span> i'm here for you,
             this app does all that for you.
-            <p> | </p>
-            <p className="lg:text-2xl">
+            <span className="lg:text-2xl">
               To see the schools your managing, navigate with the button below.
-            </p>
+            </span>
           </p>
 
           <a

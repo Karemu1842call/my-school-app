@@ -1,0 +1,2 @@
+class Techmentor < ApplicationRecord
+end

@@ -1,0 +1,30 @@
+.card {
+    text-align: center;
+    border: grey solid 1px;
+    padding: 1rem;
+    width: 15rem;
+    height: 29rem;
+    margin: 1rem 2rem;
+    box-shadow: 4px 5px #0b0741;
+    border-radius: 50px;
+    align-items: center;
+    display: inline-grid;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .school-image {
+    justify-self: center;
+    height: 12rem;
+    width: auto;
+  }
+
+  .updtbtn{
+  background-color: rgb(3, 3, 7);
+  font-size: 16px;
+  font-weight: 300px;
+  color: white;
+
+  border-radius: 20px;
+
+  }
