@@ -25,7 +25,7 @@ function App() {
   if (!currentuser) return <Login setCurrentuser={setCurrentuser} />;
   return (
     <>
-      <Header />
+      <Header setCurrentuser={setCurrentuser}/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/schooldata" element={<Schooldata />} />

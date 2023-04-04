@@ -2,9 +2,15 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
-function Header() {
+function Header(currentuser,setCurrentuser) {
   const [navbar, setNavbar] = useState(false);
-
+  function handleLogout() {
+    fetch("/logout", { method: "DELETE" }).then((r) => {
+      if (r.ok) {
+        setCurrentuser(null);
+      }
+    });
+  }
   return (
     <div>
       <nav className="w-full bg-white shadow">
@@ -59,7 +65,7 @@ function Header() {
               }`}
             >
               <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              <li className="text-gray-600 hover:text-blue-600">
+                <li className="text-gray-600 hover:text-blue-600">
                   <NavLink
                     className="hover:border-b-4 pb-2 border-white"
                     to="/schooldata"
@@ -108,15 +114,9 @@ function Header() {
                     contact us
                   </NavLink>
                 </li>
-                 <li className="text-gray-600 hover:text-blue-600">
-                  <NavLink
-                    className="hover:border-b-4 pb-2 border-white"
-                    to="/login"
-                  >
-                    LOGIN
-                  </NavLink>
+                <li className="text-gray-600 hover:text-blue-600">
+                  <btn onClick={handleLogout}>signout</btn>
                 </li>
-
               </ul>
             </div>
           </div>
