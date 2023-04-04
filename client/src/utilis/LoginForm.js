@@ -29,6 +29,9 @@ function Loginform(setCurrentuser) {
     <>
       <section class="bg-primary dark:bg-gray-900">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h1 class="text-4xl font-bold mb-5 pb-2 mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
+            My-School App
+          </h1>
           <h2 class="text-4xl font-bold mb-5 pb-2 mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
             Login
           </h2>

@@ -8,7 +8,7 @@ function Home() {
         <div className="hero-info pb-5 md:pb-0">
           <h1 className="text-4xl lg:text-6xl">
             Hi, <br />
-            this is <span className="text-accent">my-school</span> <br />
+            this is <span className="text-accent ">my-school</span> <br />
             Management app
           </h1>
 
