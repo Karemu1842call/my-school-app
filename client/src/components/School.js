@@ -19,7 +19,7 @@ function School({ id, name, avatar, email, telno, onDelete }) {
       <p> School Email: {email} </p>
       <p>School tel no: {telno} </p>
      <Button variant="outline-danger" onClick={handleDelete}> Delete</Button>
-     <Button variant="outline-primary" href={`/updateform?id=${id}`}> Update / Add a new school</Button>
+     <Button variant="outline-primary" href={`/updateform?id=${id}`}> Update</Button>
     </div>
   );
 }

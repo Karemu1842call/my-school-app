@@ -8,23 +8,15 @@ export default function UpdateForm({ id }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
-    switch (name) {
-      case "sch_name":
-        setName(value);
-        break;
-      case "sch_email":
-        setEmail(value);
-        break;
-      case "sch_avatar":
-        setAvatar(value);
-        break;
-      case "sch_telno":
-        setTelno(value);
-        break;
-      default:
-        break;
-    }
+  
+    const setValue = {
+      sch_name: setName,
+      sch_email: setEmail,
+      sch_avatar: setAvatar,
+      sch_telno: setTelno
+    }[name];
+  
+    setValue(value);
   };
 
   const handleSubmit = async (e) => {
