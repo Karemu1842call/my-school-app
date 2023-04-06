@@ -1,10 +1,15 @@
 import React, { useState } from "react";
+import { useLocation } from 'react-router-dom';
 
-export default function UpdateForm({ id }) {
+
+export default function UpdateForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [avatar, setAvatar] = useState("");
   const [telno, setTelno] = useState("");
+
+  const location = useLocation();
+  const id = new URLSearchParams(location.search).get('id');
 
   const handleChange = (e) => {
     const { name, value } = e.target;

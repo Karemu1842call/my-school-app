@@ -64,16 +64,16 @@ export default function CreateForm() {
           </div>
           <div>
             <label
-              htmlFor="sch_avatar"
+              htmlFor="sch_email"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               Your Email
             </label>
             <input
               type="email"
-              id="sch_avatar"
-              name="sch_avatar"
-              value={formData.sch_avatar}
+              id="sch_email"
+              name="sch_email"
+              value={formData.sch_email}
               onChange={handleChange}
               className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="Enter your email"
@@ -81,16 +81,16 @@ export default function CreateForm() {
           </div>
           <div>
             <label
-              htmlFor="sch_email"
+              htmlFor="sch_avatar"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
             >
               Your Avatar
             </label>
             <input
               type="url"
-              id="sch_email"
-              name="sch_email"
-              value={formData.sch_email}
+              id="sch_avatar"
+              name="sch_avatar"
+              value={formData.sch_avatar}
               onChange={handleChange}
               className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
               placeholder="Enter your Image url"
