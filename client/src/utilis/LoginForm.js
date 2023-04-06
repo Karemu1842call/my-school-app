@@ -4,6 +4,7 @@ import "../components/style/Login.css";
 function Loginform(setCurrentuser) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  // eslint-disable-next-line
   const [errors, setErrors] = useState([]);
   
 

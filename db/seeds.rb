@@ -29,19 +29,19 @@ puts "seeding schools"
 schools=School.create([
     {
         sch_name:"Big boy dev school",
-        sch_avatar: "to be updated",
+        sch_avatar: "https://img.freepik.com/free-vector/large-school-building-scene_1308-32058.jpg?w=360",
         sch_email: "bigboy@gmail.com",
         sch_telno: "+2541383329",
     },
     {
         sch_name:"Trial dev school",
-        sch_avatar: "to be updated",
+        sch_avatar: "https://media.istockphoto.com/id/186655818/vector/vector-school-building.jpg?s=612x612&w=0&k=20&c=R4E6i4SFNUehDmwK1R--QddAozO4yLhAfYxMdzL1kpk=",
         sch_email: "trial@gmail.com",
         sch_telno: "+2541383329"
     },
     {
         sch_name:"Oh boy! dev school",
-        sch_avatar: "to be updated",
+        sch_avatar: "https://media.istockphoto.com/id/1319938106/vector/school-building-facade-with-green-grass-and-trees-public-educational-institution-exterior.jpg?s=612x612&w=0&k=20&c=DwOHvs1pe1DemAymxwS6qg7nrgTw0CwLum_sqfB-H3U=",
         sch_email: "oohboy@gmail.com",
         sch_telno: "+2541383329"
     }
@@ -94,20 +94,16 @@ puts "Seeding Techmentors"
 
 techmentors=Techmentor.create([
     {
-        name: "Mark Zuckerberg",
+        name: "Gol D Rodger",
         email: "metasmh@gmail.com",
-        devskills: "JS,C,C++,Dart,Ruby"
+        devskills: "JS,C,C++,Dart,Ruby",
+        myavatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5nNKQwRcZtxX6d6bqlm30Y4gvn4mpy0S5hg&usqp=CAU"
     },
     {
-        name: "Bill Smh",
+        name: "Monkey D Garp",
         email: "doorsos@gmail.com",
-        devskills: "JS,C,C++,Dart,Ruby"
+        devskills: "JS,C,C++,Dart,Ruby",
+        myavatar: "https://static.wikia.nocookie.net/onepiece/images/4/42/Garp_Burning_Will.png/revision/latest?cb=20200626022547"
     }
 ])
-
-User.create([
-    {
-        username:"kinoti1",
-        password:"kinoti1"
-    }
-])
+puts "done seeding tech mentors"

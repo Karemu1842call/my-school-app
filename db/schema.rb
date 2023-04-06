@@ -40,7 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_04_032547) do
     t.datetime "updated_at", null: false
     t.index ["cohort_id"], name: "index_students_on_cohort_id"
     t.index ["school_id"], name: "index_students_on_school_id"
-  end
+  end/courses/261
 
   create_table "techmentors", force: :cascade do |t|
     t.string "name"

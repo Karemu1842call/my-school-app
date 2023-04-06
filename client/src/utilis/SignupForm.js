@@ -4,7 +4,8 @@ import "../components/style/Login.css";
 function Signupform(setCurrentuser) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState([]);
+  // eslint-disable-next-line
+  const [errors, setErrors] = useState([]);   
 
   function onSubmit(e) {
     e.preventDefault();
@@ -38,7 +39,7 @@ function Signupform(setCurrentuser) {
           <p class="mb-8 lg:mb-16 font-light text-center text-white">
             Please Enter your details to Signup
           </p>
-          <form action="#" method="POST" class="space-y-8" onSubmit={onSubmit}>
+          <form action="#" method="POST" class="space-y-8" onSubmit={onSubmit}  >
             <div>
               <label
                 for="email"

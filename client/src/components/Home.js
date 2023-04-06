@@ -23,10 +23,10 @@ function Home() {
           </p>
 
           <a
-            href="/school"
+            href="/createform"
             className=" btn bg-accent  border-2 border-[#7477FF] text-white px-6 py-3 hover:bg-transparent"
           >
-            See My schools
+            Add a new school
           </a>
         </div>
 

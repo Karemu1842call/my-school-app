@@ -11,7 +11,8 @@ import Schooldata from "./utilis/Schooldata";
 import Tms from "./components/Tms";
 import Login from "./components/Login";
 import React, { useEffect, useState } from "react";
-
+import UpdateForm from "./utilis/UpdateForm";
+import CreateForm from "./utilis/CreateForm";
 function App() {
   const [currentuser, setCurrentuser] = useState("");
 
@@ -25,6 +26,7 @@ function App() {
   if (!currentuser) return <Login setCurrentuser={setCurrentuser} />;
   return (
     <>
+    <div className="bg-primary">
       <Header setCurrentuser={setCurrentuser}/>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -34,8 +36,11 @@ function App() {
         <Route path="/tms" element={<Tms />} />
         <Route path="/education" element={<Education />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/updateform" element={<UpdateForm />} />
+        <Route path="/createform" element={<CreateForm />} />
       </Routes>
       <Footer />
+      </div>
     </>
   );
 }

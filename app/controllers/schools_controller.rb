@@ -1,27 +1,47 @@
 class SchoolsController < ApplicationController
-    def index
-        schools=School.all
-        render json:schools
+  def index
+    schools = School.all
+    render json: schools
+  end
+
+  def show
+    schools = School.find_by(id: params[:id])
+    if schools
+      render json: schools, status: :ok
+    else
+      render json: { error: "No such school exists" }, status: :not_found
     end
-    def show
-        schools=School.find_by(id: params[:id])
-        if schools
-            render json:schools, status: :ok
-        else
-            render json: {error:"No such school exists"}, status: :not_found
-        end
+  end
+
+  def create
+    schools = School.new(school_params)
+  
+    if schools.save
+      render json: schools, status: :created
+    else
+      render json: { errors: schools.errors.full_messages }, status: :unprocessable_entity
     end
-    def update
-        schools = School.find_by(id: params[:id])
-        if schools
-          schools.update(school_params)
-          render json: schools
-        else
-          render json: { error: "School not found" }, status: :not_found
-        end
-      end
-      private
-      def school_params
-        params.permit(:sch_avatar)
-      end
+  end
+
+  def update
+    schools = School.find_by(id: params[:id])
+    if schools
+      schools.update(school_params)
+      render json: schools
+    else
+      render json: { error: "School not found" }, status: :not_found
+    end
+  end
+
+  def destroy
+    schools = School.find(params[:id])
+    schools.destroy
+    head :no_content
+  end
+
+  private
+
+  def school_params
+    params.permit(:sch_name, :sch_email, :sch_avatar, :sch_telno)
+  end
 end
