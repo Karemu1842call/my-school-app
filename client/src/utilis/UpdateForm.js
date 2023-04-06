@@ -8,8 +8,8 @@ export default function UpdateForm() {
   const [avatar, setAvatar] = useState("");
   const [telno, setTelno] = useState("");
 
-  const location = useLocation();
-  const id = new URLSearchParams(location.search).get('id');
+  const myid = useLocation();
+  const id = new URLSearchParams(myid.search).get('id');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
