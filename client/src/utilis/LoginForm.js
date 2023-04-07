@@ -1,36 +1,34 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import "../components/style/Login.css";
 
-function Loginform(setCurrentuser) {
+function Loginform({ setCurrentuser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  // eslint-disable-next-line
   const [errors, setErrors] = useState([]);
-  
 
-  function onLogin(e){
-    e.preventDefault()
-    const user= {
+  function onLogin(e) {
+    e.preventDefault();
+    const user = {
       username,
-      password
-    }
-    fetch("/login",{
-      method:"POST",
-      headers:{"content-Type":"application/json"},
-      body:JSON.stringify(user)
-    })
-    .then(res=>{
+      password,
+    };
+    fetch("/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    }).then((res) => {
       if (res.ok) {
-        res.json().then((user) => setCurrentuser(setCurrentuser));
+        res.json().then((user) => setCurrentuser(user));
       } else {
-        res.json().then((err) => setErrors(err.errors));      }
-    })
+        res.json().then((err) => setErrors(err.errors));
+      }
+    });
   }
   return (
     <>
       <section class="bg-primary dark:bg-gray-900">
         <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-        <h1 class="text-4xl font-bold mb-5 pb-2 mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
+          <h1 class="text-4xl font-bold mb-5 pb-2 mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
             My-School App
           </h1>
           <h2 class="text-4xl font-bold mb-5 pb-2 mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
@@ -40,6 +38,13 @@ function Loginform(setCurrentuser) {
             Please Enter your details to login
           </p>
           <form action="#" method="POST" class="space-y-8" onSubmit={onLogin}>
+            {errors.length > 0 && (
+              <ul>
+                {errors.map((error) => (
+                  <li key={error}>{error}</li>
+                ))}
+              </ul>
+            )}
             <div>
               <label
                 for="email"
@@ -75,16 +80,14 @@ function Loginform(setCurrentuser) {
                 required
               />
             </div>
-          
-              <button
-                type="submit"
-                className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
-                onSubmit={onLogin}
-              >
-                Login
-              </button>
-            
-           
+
+            <button
+              type="submit"
+              className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300"
+              onSubmit={onLogin}
+            >
+              Login
+            </button>
           </form>
         </div>
       </section>
